@@ -1,0 +1,103 @@
+/* styles.css */
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: solid;
+
+}
+
+/* Style table header */
+th {
+    background-color: #f2f2f2;
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style table rows */
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/* Style table data cells */
+td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+/* Apply styles to the form */
+form {
+    margin-top: 20px;
+}
+
+/* Style form inputs */
+input[type="text"] {
+    width: 200px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+/* Style form button */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* Apply styles to the form */
+form {
+    margin-top: 20px;
+    width: 100%; /* Set the form width to 100% */
+    max-width: 600px; /* Limit the maximum width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style form inputs */
+.form-group {
+    margin-bottom: 20px;
+    display: flex; /* Use flexbox to align inputs side by side */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    flex: 1; /* Allow labels to take up equal space */
+}
+
+input[type="text"] {
+    flex: 2; /* Allow inputs to take up double the space of labels */
+    width: calc(100% - 12px); /* Adjust for padding */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style form button */
+button {
+    width: 100%; /* Make the button take the whole width */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+button:hover {
+    background-color: #0056b3;
+}

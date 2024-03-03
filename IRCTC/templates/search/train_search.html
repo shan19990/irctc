@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/myStyle.css" %}"/>
+    <title>SEARCH</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_source">Source:</label>
+            <input id="id_source" type="text" name="source" maxlength="20" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="id_destination">Destination:</label>
+            <input id="id_destination" type="text" name="destination" maxlength="20" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Train Number</th>
+                <th>Train Name</th>
+                <th>Station Name</th>
+                <th>Arrival Time</th>
+                <th>Departure Time</th>
+                <th>Distance</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for train_info in train_list %}
+                <tr>
+                    <td>Train No.: {{ train_info.train_no }}</td>
+                    <td>Train Name: {{ train_info.train_name }}</td>
+                    <td>Station Name: {{ train_info.station_name }}</td>
+                    <td>Arrival Time: {{ train_info.arrival_time }}</td>
+                    <td>Departure Time: {{ train_info.departure_time }}</td>
+                    <td>Distance: {{ train_info.distance }}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</body>
+</html>
